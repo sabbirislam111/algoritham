@@ -1,0 +1,24 @@
+
+input -> a weighted graph and a source
+output -> distane of all nodes the source
+
+
+- create a distance array "d"
+- initilaze all values ot "d" to infinity
+- d[src] = 0
+- create a cisited array and make all nodes as unvisited
+
+
+- for i = 0 to n -1:
+    - pick the "unvisited" node with shortest d[node]
+    - visited[node] = 1
+    - for all adj_node of node:
+        - if d[node] + c(node , adj_node) < d[node]:
+            - d[node] = d[node] + c(node, adj_node)
+
+- output arr "d"
+
+
+
+// space complexity = O(n)
+// time complexity = O(n^2)

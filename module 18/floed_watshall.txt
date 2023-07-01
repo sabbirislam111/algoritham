@@ -1,0 +1,22 @@
+
+ => input a weighted graph as a adjacency matrix
+ => all pair shortest distance
+
+ Time complexity = O(v*3)
+ Space complexity = O(v*2)
+
+
+ - create a directed matrix "d" where d[i][j] = x where there is a directed edge
+    from node "i" to node "j" and the cost is 'x'
+ - for all node "i" d[i][j] = 0;
+ - for all nodes "i" and "j" where there isn't any directed edge from "i" to "j"
+
+
+- for all nod "k"
+    - for all node "u"
+        - for all node "v"
+            - d[u][v] = min(d[u][v], d[u][k] + d[k][v])
+
+- output all pair shorted distance "d"
+
+
